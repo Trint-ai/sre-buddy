@@ -1,0 +1,8 @@
+boto3==1.35.87
+datadog-api-client==2.31.0
+openai==1.58.1
+pymilvus==2.5.0
+schedule==1.2.2
+slack-sdk==3.34.0
+tqdm==4.67.1
+typing==3.7.4.3
