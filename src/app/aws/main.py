@@ -22,15 +22,15 @@ class aws:
                 maxResults=100
             )
 
-            # Filter out ACM-related events
-            events = [
-                event for event in response.get('events', [])
-                if event.get('service') != 'ACM'
-            ]
+            # # Filter out ACM-related events
+            # events = [
+            #     event for event in response.get('events', [])
+            #     if event.get('service') != 'ACM'
+            # ]
 
 
             # Output the events
-            for event in events:
+            for event in response.get('events', []):
                 details = self.get_event_details(event['arn'])
                 affected_resources = self.get_affected_resources(event['arn'])
 
